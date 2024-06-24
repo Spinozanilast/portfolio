@@ -1,72 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinozanilast Portfolio</title>
-    <link href="./styles/styles.css" rel="stylesheet">
-</head>
-<body>
-    <div class="theme-switcher">
-        <button class="theme-switcher_button"><img class="switch-icon light" src="./assets/LightVector.svg" alt="Light On"></button>
-        <button class="theme-switcher_button"><img class="switch-icon dark" src="./assets/NightVector.svg" alt="Dark On"></button>
-    </div>
-    <aside class="briefly-sidebar">
-        <div class="briefly-container">
-            <div class="briefly-header-container">
-                <img class="personal-photo" src="./assets/PersonalImage.png" alt="photo of my own">
-                <div class="fullname-speciality-container">
-                    <p class="fullname accent-text">
-                        Вадим Будчанин
-                    </p>
-                    <p class="speciality accent-text">
-                        ИНЖЕНЕР - ПРОГРАММИСТ
-                    </p>
-                </div>
-                </div>
-                <div class="separator"></div>
-                <div class="refs-container">
-                    <ul class="refs-list">
-                        <li>
-                            <a class="reference" href="mailto:vadik.trolla@gmail.com">
-                                <img src="./assets/Mail.svg" alt="mail icon">
-                                <p class="ref-text">vadik.trolla@gmail.com</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="reference" href="http://t.me/spinozanilast">
-                                <img src="./assets/Telegram.svg" alt="tg icon">
-                                <p class="ref-text">@spinozanilast</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="reference" href="http://vk.com/spinozanilast">
-                                <img src="./assets/VK.svg" alt="vk icon">
-                                <p class="ref-text">@spinozanilast</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="reference" href="http://github.com/spinozanilast">
-                                <img src="./assets/Github.svg" alt="github icon">
-                                <p class="ref-text">/spinozanilast</p>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spinozanilast Portfolio</title>
+        <link href="./styles/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="theme-switcher">
+            <button class="theme-switcher_button">
+                <img
+                    class="switch-icon light"
+                    src="./assets/LightVector.svg"
+                    alt="Light On"
+                />
+            </button>
+            <button class="theme-switcher_button">
+                <img
+                    class="switch-icon dark"
+                    src="./assets/NightVector.svg"
+                    alt="Dark On"
+                />
+            </button>
         </div>
-        <div class="categories">
-            <div class="categories-list">
-                <button class="category-button">Обо мне</button>
-                <button class="category-button">Разговорные языки</button>
-                <button class="category-button">Навыки</button>
-                <button class="category-button">Образование</button>
-                <button class="category-button">Сильные стороны</button>
-                <button class="category-button">Хобби</button>
+        <main class="main-flex-container">
+            <aside class="briefly-sidebar">
+                <div class="briefly-container">
+                    <div class="briefly-header-container">
+                        <img
+                            class="personal-photo"
+                            src="./assets/PersonalImage.png"
+                            alt="photo of my own"
+                        />
+                        <div class="fullname-speciality-container">
+                            <p class="fullname accent-text">Вадим Будчанин</p>
+                            <p class="speciality accent-text">
+                                ИНЖЕНЕР - ПРОГРАММИСТ
+                            </p>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="refs-container">
+                        <ul class="refs-list flex-center-wrap-container">
+                            <li>
+                                <a
+                                    class="reference"
+                                    href="mailto:vadik.trolla@gmail.com"
+                                >
+                                    <img
+                                        src="./assets/Mail.svg"
+                                        alt="mail icon"
+                                    />
+                                    <p class="ref-text">
+                                        vadik.trolla@gmail.com
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="reference"
+                                    href="http://t.me/spinozanilast"
+                                >
+                                    <img
+                                        src="./assets/Telegram.svg"
+                                        alt="tg icon"
+                                    />
+                                    <p class="ref-text">@spinozanilast</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="reference"
+                                    href="http://vk.com/spinozanilast"
+                                >
+                                    <img src="./assets/VK.svg" alt="vk icon" />
+                                    <p class="ref-text">@spinozanilast</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="reference"
+                                    href="http://github.com/spinozanilast"
+                                >
+                                    <img
+                                        src="./assets/Github.svg"
+                                        alt="github icon"
+                                    />
+                                    <p class="ref-text">/spinozanilast</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="categories-list">
+                    <button class="category-button">Обо мне</button>
+                    <button class="category-button">Разговорные языки</button>
+                    <button class="category-button">Навыки</button>
+                    <button class="category-button">Образование</button>
+                    <button class="category-button">Сильные стороны</button>
+                    <button class="category-button">Хобби</button>
+                </nav>
+            </aside>
+            <div class="articles-container">
+                <article class="common current" data-article-name="common">
+                    <section class="article-section">
+                        <h1 class="article-header accent-text">Обо мне</h1>
+                        <p class="article-content-text">
+                            &emsp;&emsp;Целеустремленный начинающий
+                            инженер-программист. Я студент третьего курса
+                            факультета информационных технологий и
+                            робототехники, специализирующийся на разработке
+                            программного обеспечения.
+                        </p>
+                        <p class="article-content-text">
+                            &emsp;&emsp;Я имею опыт работы с технологиями .NET,
+                            такими как C#, ASP.NET MVC, Entity Framework, LINQ,
+                            WPF. Я также знаком с базами данных SQL Server и
+                            MySQL, а также с инструментами разработки Visual
+                            Studio, Jetbrains и Git. Я ответственный,
+                            инициативный и коммуникабельный человек, способный
+                            работать в команде и самостоятельно, также имею
+                            чёткое умение быстро формулировать необходимые
+                            запросы для поиска информации. Я готов к обучению и
+                            развитию, а также к выполнению поставленных задач в
+                            срок и с высоким качеством.
+                        </p>
+                    </section>
+                    <section class="article-section">
+                        <h1 class="article-header"></h1>
+                        <p class="article-content-text"></p>
+                    </section>
+                    <section class="article-section">
+                        <h1 class="article-header"></h1>
+                        <p class="article-content-text"></p>
+                    </section>
+                    <section class="article-section">
+                        <h1 class="article-header"></h1>
+                        <p class="article-content-text"></p>
+                    </section>
+                    <section class="article-section">
+                        <h1 class="article-header"></h1>
+                        <p class="article-content-text"></p>
+                    </section>
+                    <section class="article-section">
+                        <h1 class="article-header"></h1>
+                        <p class="article-content-text"></p>
+                    </section>
+                </article>
             </div>
-        </div>
-    </aside>
-    <main>
-    </main>
-</body>
+        </main>
+    </body>
 </html>
