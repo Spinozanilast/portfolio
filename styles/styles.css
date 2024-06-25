@@ -18,6 +18,7 @@
     --black: #000;
     --dark-grey: #121313;
     --light-grey: #3c3c3c;
+    --skills-grey: #3b3b3b;
 
     /* accent colors */
     --orange: #fa6a37;
@@ -282,4 +283,23 @@ a:hover:after {
     font-family: 'Inter-Regular';
     font-weight: 400;
     text-align: justify;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Inter-Bold';
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.skill {
+    width: max-content;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 35px;
+    background-color: var(--skills-grey);
+    color: var(--orange);
 }
