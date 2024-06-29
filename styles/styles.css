@@ -206,7 +206,8 @@ a {
     position: relative;
     padding: 5px;
 }
-a:after {
+
+a.reference:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: '';
@@ -219,7 +220,7 @@ a:after {
     width: 0;
 }
 
-a:hover:after {
+a.reference:hover:after {
     width: 100%;
     left: 0;
 }
@@ -302,4 +303,7 @@ a:hover:after {
     border-radius: 35px;
     background-color: var(--skills-grey);
     color: var(--orange);
+}
+
+.commont-technologies {
 }
