@@ -24,6 +24,7 @@
     --orange: #fa6a37;
     --night-blue: #305bf1;
     --light-yellow: #efd28d;
+    --grey-accent: #636363;
 
     /* langs progresses */
     --width-cs: 80%;
@@ -58,8 +59,7 @@ img,
 ion-icon,
 a,
 button,
-time,
-span {
+time {
     display: block;
 }
 
@@ -88,6 +88,23 @@ body {
 }
 
 /*-----------------------------------*\
+  #DYNAMIC
+\*-----------------------------------*/
+
+.animated-section-background {
+    animation: background-color-change 1s;
+}
+
+@keyframes background-color-change {
+    0% {
+        background-color: var(--dark-grey);
+    }
+    100% {
+        background-color: var(--light-grey);
+    }
+}
+
+/*-----------------------------------*\
   #GLOBALS
 \*-----------------------------------*/
 
@@ -102,6 +119,24 @@ body {
     gap: 20px;
     display: flex;
     justify-content: center;
+}
+
+.accent-span-text {
+    color: var(--orange);
+    font-family: 'Inter-Bold';
+}
+
+.accent-italic-span-text {
+    color: var(--grey-accent);
+    font-style: italic;
+}
+
+.formatted-text {
+    margin-bottom: 10px;
+}
+
+span {
+    display: inline;
 }
 
 /*-----------------------------------*\
@@ -124,17 +159,46 @@ body {
     width: 50%;
 }
 
-.theme-switcher .light {
-    filter: drop-shadow(0px 4px var(--light-yellow));
-    -webkit-filter: drop-shadow(0px 4px var(--light-yellow));
-}
-.theme-switcher .dark {
-    filter: drop-shadow(0px -4px var(--night-blue));
-    -webkit-filter: drop-shadow(0px -4px var(--night-blue));
-}
-
 .switch-icon {
     margin: auto;
+}
+
+.theme-switcher .light:hover {
+    animation: move-shadow-light 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes move-shadow-light {
+    0% {
+        filter: drop-shadow(0px 0px var(--light-yellow));
+        -webkit-filter: drop-shadow(0px 0px var(--light-yellow));
+    }
+    50% {
+        filter: drop-shadow(0px 2px var(--light-yellow));
+        -webkit-filter: drop-shadow(0px 2px var(--light-yellow));
+    }
+    100% {
+        filter: drop-shadow(0px 4px var(--light-yellow));
+        -webkit-filter: drop-shadow(0px 4px var(--light-yellow));
+    }
+}
+
+.theme-switcher .dark:hover {
+    animation: move-shadow-dark 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes move-shadow-dark {
+    0% {
+        filter: drop-shadow(0px 0px var(--night-blue));
+        -webkit-filter: drop-shadow(0px 0px var(--night-blue));
+    }
+    50% {
+        filter: drop-shadow(0px -2px var(--night-blue));
+        -webkit-filter: drop-shadow(0px -2px var(--night-blue));
+    }
+    100% {
+        filter: drop-shadow(0px -4px var(--night-blue));
+        -webkit-filter: drop-shadow(0px -4px var(--night-blue));
+    }
 }
 
 /*-----------------------------------*\
@@ -272,6 +336,11 @@ a.reference:hover:after {
   # Articles (Content Part)
 \*-----------------------------------*/
 
+div.articles-container {
+    height: 85vh;
+    overflow-y: scroll;
+}
+
 .articles-container {
     border-radius: 35px;
     margin-right: 30;
@@ -312,6 +381,11 @@ a.reference:hover:after {
     border-radius: 35px;
     background-color: var(--skills-grey);
     color: var(--orange);
+    text-align: center;
+}
+
+p.skill {
+    text-align: center;
 }
 
 /*-----------------------------------*\
@@ -463,8 +537,7 @@ img,
 ion-icon,
 a,
 button,
-time,
-span {
+time {
     display: block;
 }
 
@@ -614,9 +687,6 @@ body {
 a {
     color: #fff;
     text-decoration: none;
-
-    display: inline-block;
-    position: relative;
     padding: 5px;
 }
 
@@ -676,13 +746,6 @@ a.reference:hover:after {
 /*-----------------------------------*\
   # Articles (Content Part)
 \*-----------------------------------*/
-
-.articles-container {
-    border-radius: 35px;
-    margin-right: 30;
-    color: white;
-    background-color: var(--dark-grey);
-}
 
 .article-section {
     margin: 20px;
@@ -748,6 +811,7 @@ a.reference:hover:after {
 }
 
 .blue-second-text {
+    display: block;
     color: var(--night-blue);
 }
 
@@ -848,4 +912,50 @@ a.reference:hover:after {
     100% {
         width: var(--width-sql);
     }
+}
+
+/*-----------------------------------*\
+  # Articles (Education)
+\*-----------------------------------*/
+
+a.accent-span-text {
+    display: inline;
+}
+
+a.reference-content:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--orange);
+    transition: width 0.5s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a.reference-content:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/*-----------------------------------*\
+  # Articles (Hobbies)
+\*-----------------------------------*/
+
+.hobby-element {
+    display: flex;
+    align-items: center;
+}
+
+p.hobby-name {
+    color: var(--orange);
+}
+
+.hobbies-flex-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
