@@ -164,7 +164,8 @@ span {
 }
 
 .theme-switcher .light:hover {
-    animation: move-shadow-light 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation: move-shadow-light 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+        forwards;
 }
 
 @keyframes move-shadow-light {
@@ -183,7 +184,7 @@ span {
 }
 
 .theme-switcher .dark:hover {
-    animation: move-shadow-dark 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: move-shadow-dark 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 @keyframes move-shadow-dark {
