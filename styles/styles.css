@@ -92,15 +92,19 @@ body {
 \*-----------------------------------*/
 
 .animated-section-background {
+    border-radius: 35px;
     animation: background-color-change 1s;
+    animation-direction: alternate-reverse;
 }
 
 @keyframes background-color-change {
     0% {
         background-color: var(--dark-grey);
+        padding: 0px;
     }
     100% {
         background-color: var(--light-grey);
+        padding: 10px;
     }
 }
 
@@ -561,4 +565,49 @@ p.hobby-name {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.education-additive {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1000px) {
+    main.main-flex-container {
+        flex-direction: column;
+    }
+
+    .briefly-sidebar {
+        width: auto;
+    }
+
+    .briefly-container {
+        max-width: none;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    article {
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media only screen and (min-height: 1400px) {
+    main.main-flex-container {
+        flex-direction: column;
+    }
+
+    .briefly-sidebar {
+        width: auto;
+    }
+
+    .briefly-container {
+        max-width: none;
+    }
+
+    div.articles-container {
+        height: auto;
+    }
 }
