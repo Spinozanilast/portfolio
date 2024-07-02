@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Spinozanilast Portfolio</title>
         <link href="./styles/styles.css" rel="stylesheet" />
+        <script src="./scripts/script.js"></script>
     </head>
     <body>
         <div class="theme-switcher">
@@ -94,12 +95,12 @@
                 </div>
                 <nav class="categories-list">
                     <a class="category-button" href="#about-me">Обо мне</a>
-                    <a class="category-button" href="#speak-langs">
-                        Разговорные языки
+                    <a class="category-button" href="#prog-langs">
+                        Языки программирования
                     </a>
                     <a class="category-button" href="#skills">Навыки</a>
                     <a class="category-button" href="#education">Образование</a>
-                    <a class="category-button" href="#best-skills">
+                    <a class="category-button" href="#strengths">
                         Сильные стороны
                     </a>
                     <a class="category-button" href="#hobbies">Хобби</a>
@@ -131,7 +132,7 @@
                         </p>
                     </section>
                     <section class="article-section">
-                        <h1 class="article-header">Навыки</h1>
+                        <h1 id="skills" class="article-header">Навыки</h1>
                         <div class="skills-container">
                             <p class="article-content-text skill">
                                 Аналитическое мышление
@@ -147,7 +148,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="article-section">
+                    <section id="strengths" class="article-section">
                         <h1 class="article-header">Сильные стороны</h1>
                         <div class="skills-container">
                             <p class="article-content-text skill">
@@ -167,7 +168,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="article-section">
+                    <section id="prog-langs" class="article-section">
                         <h1 class="article-header">
                             Знание языков программирования
                         </h1>
@@ -227,13 +228,87 @@
                             </div>
                         </div>
                     </section>
-                    <section class="article-section">
-                        <h1 class="article-header"></h1>
-                        <p class="article-content-text"></p>
+                    <section id="education" class="article-section">
+                        <h1 class="article-header">Образование</h1>
+                        <div class="education-content-container">
+                            <p class="formatted-text">
+                                Университет -
+                                <a
+                                    class="accent-span-text reference-content"
+                                    href="https://bntu.by"
+                                >
+                                    БНТУ
+                                </a>
+                            </p>
+                            <p class="formatted-text">
+                                Факультет -
+                                <a
+                                    class="accent-span-text reference-content"
+                                    href="https://bntu.by/faculties/fitr"
+                                >
+                                    ФИТР (информационных технологий и
+                                    робототехники)
+                                </a>
+                            </p>
+                            <p class="formatted-text">
+                                Специальность -
+                                <span class="accent-span-text">
+                                    Информационные системы и технологии в
+                                    представлении и обработке информации (ИСИТ)
+                                </span>
+                            </p>
+                            <p class="formatted-text">
+                                С 2021 года учусь
+                                <span class="accent-italic-span-text">
+                                    (3 курс на данный момент)
+                                </span>
+                                в БНТУ. Регулярно учавстовал в математических
+                                университетских олимпиадах: в 2022 и 2023
+                                <span class="accent-italic-span-text">
+                                    (2 и 3 места соответственно)
+                                </span>
+                                .
+                            </p>
+                        </div>
                     </section>
-                    <section class="article-section">
-                        <h1 class="article-header"></h1>
-                        <p class="article-content-text"></p>
+                    <section id="hobbies" class="article-section">
+                        <h1 class="article-header">Хобби</h1>
+                        <div class="hobbies-flex-container">
+                            <div class="hobby-element">
+                                <img
+                                    src="/assets/Orthogonal View.png"
+                                    alt="3D Modeling icon"
+                                    class="hobby-icon"
+                                />
+                                <p class="hobby-name">3D - моделированиие</p>
+                            </div>
+                            <div class="hobby-element">
+                                <img
+                                    src="/assets/Developer.png"
+                                    alt="Developer icon"
+                                    class="hobby-icon"
+                                />
+                                <p class="hobby-name">Разработка игр</p>
+                            </div>
+                            <div class="hobby-element">
+                                <img
+                                    src="/assets/Books.png"
+                                    alt="Book icon"
+                                    class="hobby-icon"
+                                />
+                                <p class="hobby-name">Чтение книг</p>
+                            </div>
+                            <div class="hobby-element">
+                                <img
+                                    src="/assets/Plus.png"
+                                    alt="Plus icon"
+                                    class="hobby-icon"
+                                />
+                                <p class="hobby-name">
+                                    Изучение новых языков программирования
+                                </p>
+                            </div>
+                        </div>
                     </section>
                 </article>
             </div>
