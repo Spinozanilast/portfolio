@@ -571,7 +571,7 @@ p.hobby-name {
     text-align: justify;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 950px) {
     main.main-flex-container {
         flex-direction: column;
     }
