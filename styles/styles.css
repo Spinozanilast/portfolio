@@ -26,6 +26,9 @@
     --light-yellow: #efd28d;
     --grey-accent: #636363;
 
+    /* selection colors */
+    --dark-selection-color: #ffaf2e;
+
     /* langs progresses */
     --width-cs: 80%;
     --width-cpp: 50%;
@@ -87,6 +90,15 @@ body {
     background: var(--black);
 }
 
+moz::selection,
+::selection {
+    background-color: var(--dark-selection-color);
+}
+
+h1::selection {
+    text-shadow: var(--orange) 2px 5px;
+}
+
 /*-----------------------------------*\
   #DYNAMIC
 \*-----------------------------------*/
@@ -144,10 +156,17 @@ span {
 }
 
 /*-----------------------------------*\
-  #THEME SWITCHER
+  #SWITCHER
 \*-----------------------------------*/
 
-.theme-switcher {
+.switchers-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Theme Switch */
+
+.switch {
     background-color: var(--dark-grey);
     width: 110px;
     height: 45px;
@@ -159,15 +178,16 @@ span {
     flex-direction: row;
 }
 
-.theme-switcher_button {
+.switcher_button {
     width: 50%;
 }
 
-.switch-icon {
+.switch-button-content {
     margin: auto;
 }
 
-.theme-switcher .light:hover {
+.theme-switch .light:hover,
+.theme-switch .light:active {
     animation: move-shadow-light 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
         forwards;
 }
@@ -187,7 +207,8 @@ span {
     }
 }
 
-.theme-switcher .dark:hover {
+.theme-switch .dark:hover,
+.theme-switch .dark:active {
     animation: move-shadow-dark 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
@@ -204,6 +225,23 @@ span {
         filter: drop-shadow(0px -4px var(--night-blue));
         -webkit-filter: drop-shadow(0px -4px var(--night-blue));
     }
+}
+
+/* Lang Switch */
+
+.lang-switch-button {
+    text-align: center;
+    font-family: 'Inter-Bold';
+    font-size: 1em;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    transition: background-color 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+button.lang-switch-button.active {
+    background-color: var(--orange);
 }
 
 /*-----------------------------------*\
@@ -253,7 +291,7 @@ span {
 .fullname {
     padding: 5px;
     color: white;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: 600;
 }
 
@@ -294,7 +332,8 @@ a.reference:after {
     width: 0;
 }
 
-a.reference:hover:after {
+a.reference:hover:after,
+a.reference:active:after {
     width: 100%;
     left: 0;
 }
@@ -319,7 +358,8 @@ a.reference:hover:after {
     grid-column: auto;
 }
 
-.category-button:hover {
+.category-button:hover,
+.category-button:active {
     animation-name: category-button-animation;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -364,6 +404,10 @@ div.articles-container {
     font-family: 'Inter-Regular';
     font-weight: 400;
     text-align: justify;
+}
+
+.article-content-text.bio {
+    text-indent: 1em;
 }
 
 .skills-container {
@@ -526,7 +570,7 @@ p.skill {
 \*-----------------------------------*/
 
 a.accent-span-text {
-    display: inline;
+    text-align: justify;
 }
 
 a.reference-content:after {
@@ -542,7 +586,8 @@ a.reference-content:after {
     width: 0;
 }
 
-a.reference-content:hover:after {
+a.reference-content:hover:after,
+a.reference-content:active:after {
     width: 100%;
     left: 0;
 }

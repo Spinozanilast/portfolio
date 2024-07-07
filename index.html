@@ -7,21 +7,41 @@
         <link href="./styles/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="theme-switch">
-            <button class="theme-switcher_button">
-                <img
-                    class="switch-icon light"
-                    src="./assets/LightVector.svg"
-                    alt="Light On"
-                />
-            </button>
-            <button class="theme-switcher_button">
-                <img
-                    class="switch-icon dark"
-                    src="./assets/NightVector.svg"
-                    alt="Dark On"
-                />
-            </button>
+        <div class="switchers-container">
+            <div class="switch theme-switch">
+                <button id="light-button" class="switcher_button">
+                    <img
+                        class="switch-button-content light"
+                        src="./assets/LightVector.svg"
+                        alt="Light On"
+                    />
+                </button>
+                <button id="dark-button" class="switcher_button">
+                    <img
+                        class="switch-button-content dark"
+                        src="./assets/NightVector.svg"
+                        alt="Dark On"
+                    />
+                </button>
+            </div>
+            <div class="switch">
+                <button
+                    id="ru-button"
+                    class="switcher_button lang-switch-button active"
+                    data-i18n-key="ru_button"
+                    onclick="setLocale(this, 'en-button', 'ru')"
+                >
+                    РУС
+                </button>
+                <button
+                    id="en-button"
+                    onclick="setLocale(this, 'ru-button', 'en')"
+                    class="switcher_button lang-switch-button"
+                    data-i18n-key="en_button"
+                >
+                    EN
+                </button>
+            </div>
         </div>
         <main class="main-flex-container">
             <aside class="briefly-sidebar">
@@ -219,7 +239,7 @@
                         <div class="skills-container">
                             <p
                                 class="article-content-text skill"
-                                data-i18n-key="entartaining"
+                                data-i18n-key="entertaining"
                             >
                                 Занимательный
                             </p>

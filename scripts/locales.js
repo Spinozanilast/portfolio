@@ -2,6 +2,8 @@ const DEFAULT_LOCALE = "ru";
 
 const localizations = {
     "ru": {
+        "ru_button": "РУС",
+        "en_button": "EN",
         "full_name": "Вадим Будчанин",
         "personal-speciality": "ИНЖЕНЕР - ПРОГРАММИСТ",
         "about_me": "Обо мне",
@@ -37,6 +39,8 @@ const localizations = {
         "bio_part2": "Я имею опыт работы с технологиями .NET, такими как C#, ASP.NET MVC, Entity Framework, LINQ, WPF. Я также знаком с базами данных SQL Server и MySQL, а также с инструментами разработки Visual Studio, Jetbrains и Git. Я ответственный, инициативный и коммуникабельный человек, способный работать в команде и самостоятельно, также имею чёткое умение быстро формулировать необходимые запросы для поиска информации. Я готов к обучению и развитию, а также к выполнению поставленных задач в срок и с высоким качеством."
     },
     "en": {
+        "ru_button": "RU",
+        "en_button": "EN",
         "full_name": "Vadim Budchanin",
         "personal-speciality": "SOFTWARE ENGINEER",
         "about_me": "About Me",
@@ -62,7 +66,7 @@ const localizations = {
         "speciality_name": "Information systems and technologies in presentation and processing of information (ISIT)",
         "studying": "Studying since 2021",
         "course": "3rd year currently",
-        "olympiads": "in BNTU. Regular participant in university math olympiads",
+        "olympiads": "at BNTU. Regularly participated in mathematical university olympiads: in 2022 and 2023",
         "olympiads_results": "(2 and 3 places respectively)",
         "hobby_3d_modeling": "3D - Modeling",
         "hobby_game_development": "Game Development",
@@ -74,20 +78,22 @@ const localizations = {
 };
 
 let translations;
-let locale;
+let locale = DEFAULT_LOCALE;
 
-document.addEventListener("DOMContentLoaded", () => {
-    translations = localizations[DEFAULT_LOCALE];
-    setLocale(DEFAULT_LOCALE);
-})
-
-function setLocale(newLocale) {
+function setLocale(toggleToPart, toggleFromPartId, newLocale) {
     if (newLocale === locale) return;
+    setActiveLangTogglePart(toggleToPart, toggleFromPartId)
     const newTranslations =
         localizations[newLocale];
     locale = newLocale;
     translations = newTranslations;
     translatePage();
+
+}
+
+function setActiveLangTogglePart(toggleToPart, toggleFromPartId) {
+    document.getElementById(toggleFromPartId).classList.remove("active");
+    toggleToPart.classList.add("active");
 }
 
 function translatePage() {

@@ -2,7 +2,7 @@ const CATEGORY_BUTTONS_CLASSNAME = "category-button";
 const ARTICLES_CLASSNAME = "article-section";
 const ANIMATED_BACKGROUND_CLASSNAME = "animated-section-background";
 
-const setCategoryPressAnimations = () => {
+function setCategoryPressAnimations() {
     const categoriesButtonsList = document.getElementsByClassName(CATEGORY_BUTTONS_CLASSNAME);
     const articlesList = document.getElementsByClassName(ARTICLES_CLASSNAME);
 
