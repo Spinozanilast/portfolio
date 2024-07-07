@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Spinozanilast Portfolio</title>
+        <title>Vadim Budchanin - Software Engineer Portfolio</title>
         <link href="./styles/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="theme-switcher">
+        <div class="theme-switch">
             <button class="theme-switcher_button">
                 <img
                     class="switch-icon light"
@@ -33,10 +33,18 @@
                             alt="photo of my own"
                         />
                         <div class="fullname-speciality-container">
-                            <p class="fullname accent-text">Вадим Будчанин</p>
-                            <p class="speciality accent-text">
+                            <h1
+                                class="fullname accent-text"
+                                data-i18n-key="full_name"
+                            >
+                                Вадим Будчанин
+                            </h1>
+                            <h2
+                                class="speciality accent-text"
+                                data-i18n-key="personal-speciality"
+                            >
                                 ИНЖЕНЕР - ПРОГРАММИСТ
-                            </p>
+                            </h2>
                         </div>
                     </div>
                     <div class="separator"></div>
@@ -96,83 +104,156 @@
                     </div>
                 </div>
                 <nav class="categories-list">
-                    <a class="category-button" href="#about-me">Обо мне</a>
-                    <a class="category-button" href="#skills">Навыки</a>
-                    <a class="category-button" href="#strengths">
+                    <a
+                        class="category-button"
+                        href="#about-me"
+                        data-i18n-key="about_me"
+                    >
+                        Обо мне
+                    </a>
+                    <a
+                        class="category-button"
+                        href="#skills"
+                        data-i18n-key="skills"
+                    >
+                        Навыки
+                    </a>
+                    <a
+                        class="category-button"
+                        href="#strengths"
+                        data-i18n-key="strengths"
+                    >
                         Сильные стороны
                     </a>
-                    <a class="category-button" href="#prog-langs">
+                    <a
+                        class="category-button"
+                        href="#prog-langs"
+                        data-i18n-key="prog_langs"
+                    >
                         Языки программирования
                     </a>
 
-                    <a class="category-button" href="#education">Образование</a>
-                    <a class="category-button" href="#hobbies">Хобби</a>
+                    <a
+                        class="category-button"
+                        href="#education"
+                        data-i18n-key="education"
+                    >
+                        Образование
+                    </a>
+                    <a
+                        class="category-button"
+                        href="#hobbies"
+                        data-i18n-key="hobbies"
+                    >
+                        Хобби
+                    </a>
                 </nav>
             </aside>
             <div class="articles-container">
                 <article class="common current" data-article-name="common">
                     <section id="about-me" class="article-section">
-                        <h1 class="article-header accent-text">Обо мне</h1>
-                        <p class="article-content-text">
-                            &emsp;&emsp;Целеустремленный начинающий
-                            инженер-программист. Я студент третьего курса
-                            факультета информационных технологий и
-                            робототехники, специализирующийся на разработке
-                            программного обеспечения.
+                        <h1 class="article-header" data-i18n-key="about_me">
+                            Обо мне
+                        </h1>
+                        <p
+                            class="article-content-text bio"
+                            data-i18n-key="bio_part1"
+                        >
+                            Целеустремленный начинающий инженер-программист. Я
+                            студент третьего курса факультета информационных
+                            технологий и робототехники, специализирующийся на
+                            разработке программного обеспечения.
                         </p>
-                        <p class="article-content-text">
-                            &emsp;&emsp;Я имею опыт работы с технологиями .NET,
-                            такими как C#, ASP.NET MVC, Entity Framework, LINQ,
-                            WPF. Я также знаком с базами данных SQL Server и
-                            MySQL, а также с инструментами разработки Visual
-                            Studio, Jetbrains и Git. Я ответственный,
-                            инициативный и коммуникабельный человек, способный
-                            работать в команде и самостоятельно, также имею
-                            чёткое умение быстро формулировать необходимые
-                            запросы для поиска информации. Я готов к обучению и
-                            развитию, а также к выполнению поставленных задач в
-                            срок и с высоким качеством.
+                        <p
+                            class="article-content-text bio"
+                            data-i18n-key="bio_part2"
+                        >
+                            Я имею опыт работы с технологиями .NET, такими как
+                            C#, ASP.NET MVC, Entity Framework, LINQ, WPF. Я
+                            также знаком с базами данных SQL Server и MySQL, а
+                            также с инструментами разработки Visual Studio,
+                            Jetbrains и Git. Я ответственный, инициативный и
+                            коммуникабельный человек, способный работать в
+                            команде и самостоятельно, также имею чёткое умение
+                            быстро формулировать необходимые запросы для поиска
+                            информации. Я готов к обучению и развитию, а также к
+                            выполнению поставленных задач в срок и с высоким
+                            качеством.
                         </p>
                     </section>
-                    <section class="article-section">
-                        <h1 id="skills" class="article-header">Навыки</h1>
+                    <section id="skills" class="article-section">
+                        <h1 class="article-header" data-i18n-key="skills">
+                            Навыки
+                        </h1>
                         <div class="skills-container">
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="analytical_thinking"
+                            >
                                 Аналитическое мышление
                             </p>
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="communication"
+                            >
                                 Коммуникация
                             </p>
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="problem_solving"
+                            >
                                 Решение проблем
                             </p>
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="technical_proficiency"
+                            >
                                 Техническая подкованность
                             </p>
                         </div>
                     </section>
                     <section id="strengths" class="article-section">
-                        <h1 class="article-header">Сильные стороны</h1>
+                        <h1 class="article-header" data-i18n-key="strengths">
+                            Сильные стороны
+                        </h1>
                         <div class="skills-container">
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="entartaining"
+                            >
                                 Занимательный
                             </p>
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="communication"
+                            >
                                 Коммуникация
                             </p>
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="easygoing"
+                            >
                                 Лёгкий на подьём
                             </p>
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="fast_learning"
+                            >
                                 Быстроразвивающийся
                             </p>
-                            <p class="article-content-text skill">
+                            <p
+                                class="article-content-text skill"
+                                data-i18n-key="quick_solution"
+                            >
                                 Быстро нахожу решения
                             </p>
                         </div>
                     </section>
                     <section id="prog-langs" class="article-section">
-                        <h1 class="article-header">
+                        <h1
+                            class="article-header"
+                            data-i18n-key="prog_langs_knowledges"
+                        >
                             Знание языков программирования
                         </h1>
                         <div class="langs-skills-container">
@@ -232,50 +313,76 @@
                         </div>
                     </section>
                     <section id="education" class="article-section">
-                        <h1 class="article-header">Образование</h1>
+                        <h1 class="article-header" data-i18n-key="education">
+                            Образование
+                        </h1>
                         <div class="education-content-container">
                             <p class="formatted-text">
-                                Университет -
+                                <span data-i18n-key="university">
+                                    Университет -
+                                </span>
                                 <a
                                     class="accent-span-text reference-content"
                                     href="https://bntu.by"
+                                    data-i18n-key="university_name"
                                 >
                                     БНТУ
                                 </a>
                             </p>
                             <p class="formatted-text">
-                                Факультет -
+                                <span data-i18n-key="faculty">Факультет -</span>
                                 <a
                                     class="accent-span-text reference-content"
                                     href="https://bntu.by/faculties/fitr"
+                                    data-i18n-key="faculty_name"
                                 >
                                     ФИТР (информационных технологий и
                                     робототехники)
                                 </a>
                             </p>
                             <p class="formatted-text">
-                                Специальность -
-                                <span class="accent-span-text">
+                                <span data-i18n-key="speciality">
+                                    Специальность -
+                                </span>
+
+                                <span
+                                    class="accent-span-text"
+                                    data-i18n-key="speciality_name"
+                                >
                                     Информационные системы и технологии в
                                     представлении и обработке информации (ИСИТ)
                                 </span>
                             </p>
                             <p class="formatted-text education-additive">
-                                С 2021 года учусь
-                                <span class="accent-italic-span-text">
+                                <span data-i18n-key="studying">
+                                    С 2021 года учусь
+                                </span>
+                                <span
+                                    class="accent-italic-span-text"
+                                    data-i18n-key="course"
+                                >
                                     (3 курс на данный момент)
                                 </span>
-                                в БНТУ. Регулярно учавстовал в математических
-                                университетских олимпиадах: в 2022 и 2023
-                                <span class="accent-italic-span-text">
+                                <span data-i18n-key="olympiads">
+                                    в БНТУ. Регулярно учавстовал в
+                                    математических университетских олимпиадах: в
+                                    2022 и 2023
+                                </span>
+                                <span
+                                    class="accent-italic-span-text"
+                                    data-i18n-key="olympiads_results"
+                                >
                                     (2 и 3 места соответственно)
                                 </span>
-                                .
+
+                                <span>.</span>
                             </p>
                         </div>
                     </section>
                     <section id="hobbies" class="article-section">
-                        <h1 class="article-header">Хобби</h1>
+                        <h1 class="article-header" data-i18n-key="hobbies">
+                            Хобби
+                        </h1>
                         <div class="hobbies-flex-container">
                             <div class="hobby-element">
                                 <img
@@ -283,7 +390,12 @@
                                     alt="3D Modeling icon"
                                     class="hobby-icon"
                                 />
-                                <p class="hobby-name">3D - моделированиие</p>
+                                <p
+                                    class="hobby-name"
+                                    data-i18n-key="hobby_3d_modeling"
+                                >
+                                    3D - моделированиие
+                                </p>
                             </div>
                             <div class="hobby-element">
                                 <img
@@ -291,7 +403,12 @@
                                     alt="Developer icon"
                                     class="hobby-icon"
                                 />
-                                <p class="hobby-name">Разработка игр</p>
+                                <p
+                                    class="hobby-name"
+                                    data-i18n-key="hobby_game_developing"
+                                >
+                                    Разработка игр
+                                </p>
                             </div>
                             <div class="hobby-element">
                                 <img
@@ -299,7 +416,12 @@
                                     alt="Book icon"
                                     class="hobby-icon"
                                 />
-                                <p class="hobby-name">Чтение книг</p>
+                                <p
+                                    class="hobby-name"
+                                    data-i18n-key="hobby_reading"
+                                >
+                                    Чтение книг
+                                </p>
                             </div>
                             <div class="hobby-element">
                                 <img
@@ -307,7 +429,10 @@
                                     alt="Plus icon"
                                     class="hobby-icon"
                                 />
-                                <p class="hobby-name">
+                                <p
+                                    class="hobby-name"
+                                    data-i18n-key="hobby_learning_languages"
+                                >
                                     Изучение новых языков программирования
                                 </p>
                             </div>
@@ -316,6 +441,7 @@
                 </article>
             </div>
         </main>
+        <script src="./scripts/locales.js"></script>
         <script src="./scripts/script.js"></script>
     </body>
 </html>
