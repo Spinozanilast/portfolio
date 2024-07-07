@@ -14,17 +14,11 @@
 }
 
 :root {
-    /* Background colors */
-    --black: #000;
-    --dark-grey: #121313;
-    --light-grey: #3c3c3c;
-    --skills-grey: #3b3b3b;
-
     /* accent colors */
-    --orange: #fa6a37;
-    --night-blue: #305bf1;
+    --accent-area-color: #fa6a37;
+    --secondary-accent-color: #305bf1;
+    --specific-text-color: #636363;
     --light-yellow: #efd28d;
-    --grey-accent: #636363;
 
     /* selection colors */
     --dark-selection-color: #ffaf2e;
@@ -36,6 +30,24 @@
     --width-jsts: 75%;
     --width-java: 70%;
     --width-sql: 80%;
+}
+
+[data-theme='dark'] {
+    --main-text-color: white;
+    --page-background: #000;
+    --secondary-background: #121313;
+    --additive-background: #3c3c3c;
+    --skills-background: #3b3b3b;
+    --hover-ref-line: #ffffff63;
+}
+
+[data-theme='light'] {
+    --main-text-color: black;
+    --page-background: white;
+    --secondary-background: #eaeaea;
+    --additive-background: #c7c7c7;
+    --skills-background: #c7c7c7;
+    --hover-ref-line: #94949463;
 }
 
 /*-----------------------------------*\
@@ -87,7 +99,7 @@ html {
 }
 
 body {
-    background: var(--black);
+    background: var(--page-background);
 }
 
 moz::selection,
@@ -96,7 +108,7 @@ moz::selection,
 }
 
 h1::selection {
-    text-shadow: var(--orange) 2px 5px;
+    text-shadow: var(--accent-area-color) 2px 5px;
 }
 
 /*-----------------------------------*\
@@ -111,11 +123,11 @@ h1::selection {
 
 @keyframes background-color-change {
     0% {
-        background-color: var(--dark-grey);
+        background-color: var(--secondary-background);
         padding: 0px;
     }
     100% {
-        background-color: var(--light-grey);
+        background-color: var(--additive-background);
         padding: 10px;
     }
 }
@@ -138,12 +150,12 @@ h1::selection {
 }
 
 .accent-span-text {
-    color: var(--orange);
+    color: var(--accent-area-color);
     font-family: 'Inter-Bold';
 }
 
 .accent-italic-span-text {
-    color: var(--grey-accent);
+    color: var(--specific-text-color);
     font-style: italic;
 }
 
@@ -160,22 +172,27 @@ span {
 \*-----------------------------------*/
 
 .switchers-container {
+    margin-left: 20px;
+    margin-top: 20px;
     display: flex;
     gap: 0.5rem;
 }
 
 /* Theme Switch */
 
-.switch {
-    background-color: var(--dark-grey);
-    width: 110px;
+.theme-toggle-button {
+    background-color: var(--secondary-background);
+    width: 45px;
     height: 45px;
-    margin-left: 20px;
-    margin-top: 20px;
     border-radius: 35px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+}
+
+.theme-toggle-button.dark {
+    box-shadow: var(--secondary-accent-color);
+}
+
+.theme-toggle-button.light {
+    box-shadow: var(--light-yellow);
 }
 
 .switcher_button {
@@ -214,26 +231,36 @@ span {
 
 @keyframes move-shadow-dark {
     0% {
-        filter: drop-shadow(0px 0px var(--night-blue));
-        -webkit-filter: drop-shadow(0px 0px var(--night-blue));
+        filter: drop-shadow(0px 0px var(--secondary-accent-color));
+        -webkit-filter: drop-shadow(0px 0px var(--secondary-accent-color));
     }
     50% {
-        filter: drop-shadow(0px -2px var(--night-blue));
-        -webkit-filter: drop-shadow(0px -2px var(--night-blue));
+        filter: drop-shadow(0px -2px var(--secondary-accent-color));
+        -webkit-filter: drop-shadow(0px -2px var(--secondary-accent-color));
     }
     100% {
-        filter: drop-shadow(0px -4px var(--night-blue));
-        -webkit-filter: drop-shadow(0px -4px var(--night-blue));
+        filter: drop-shadow(0px -4px var(--secondary-accent-color));
+        -webkit-filter: drop-shadow(0px -4px var(--secondary-accent-color));
     }
 }
 
 /* Lang Switch */
 
+.lang-switch {
+    background-color: var(--secondary-background);
+    width: 110px;
+    height: 45px;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
 .lang-switch-button {
     text-align: center;
     font-family: 'Inter-Bold';
     font-size: 1em;
-    color: white;
+    color: var(--main-text-color);
     width: 100%;
     height: 100%;
     border-radius: 35px;
@@ -241,12 +268,17 @@ span {
 }
 
 button.lang-switch-button.active {
-    background-color: var(--orange);
+    background-color: var(--accent-area-color);
 }
 
 /*-----------------------------------*\
   #Aside Briefly
 \*-----------------------------------*/
+
+.personal-photo {
+    margin: 20px;
+    border-radius: 35px;
+}
 
 .briefly-sidebar {
     width: min-content;
@@ -256,7 +288,7 @@ button.lang-switch-button.active {
 
 .briefly-container {
     border-radius: 35px;
-    background-color: var(--dark-grey);
+    background-color: var(--secondary-background);
     max-width: 550px;
     display: flex;
     align-items: center;
@@ -272,7 +304,7 @@ button.lang-switch-button.active {
 .separator {
     width: 95%;
     height: 1px;
-    background: white;
+    background: var(--main-text-color);
     margin: 10px 0;
 }
 
@@ -282,7 +314,7 @@ button.lang-switch-button.active {
 }
 
 .speciality {
-    color: var(--orange);
+    color: var(--accent-area-color);
     font-weight: 400;
     font-size: 1em;
     padding: 5px;
@@ -290,7 +322,7 @@ button.lang-switch-button.active {
 
 .fullname {
     padding: 5px;
-    color: white;
+    color: var(--main-text-color);
     font-size: 3em;
     font-weight: 600;
 }
@@ -298,6 +330,10 @@ button.lang-switch-button.active {
 .reference {
     display: flex;
     margin: 2px;
+}
+
+.reference > img.light {
+    filter: invert(100%);
 }
 
 .refs-list {
@@ -311,7 +347,7 @@ button.lang-switch-button.active {
 /* refs styles */
 
 a {
-    color: #fff;
+    color: var(--main-text-color);
     text-decoration: none;
 
     display: inline-block;
@@ -327,7 +363,7 @@ a.reference:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #ffffff63;
+    background: var(--hover-ref-line);
     transition: width 0.5s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -347,14 +383,13 @@ a.reference:active:after {
 }
 
 .category-button {
-    background-color: var(--dark-grey);
-    color: white;
+    background-color: var(--secondary-background);
+    color: var(--main-text-color);
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 35px;
-    color: white;
     grid-column: auto;
 }
 
@@ -367,10 +402,10 @@ a.reference:active:after {
 
 @keyframes category-button-animation {
     0% {
-        background-color: var(--dark-grey);
+        background-color: var(--secondary-background);
     }
     100% {
-        background-color: var(--orange);
+        background-color: var(--accent-area-color);
     }
 }
 
@@ -386,8 +421,8 @@ div.articles-container {
 .articles-container {
     border-radius: 35px;
     margin-right: 30;
-    color: white;
-    background-color: var(--dark-grey);
+    color: var(--main-text-color);
+    background-color: var(--secondary-background);
 }
 
 .article-section {
@@ -425,8 +460,8 @@ div.articles-container {
     padding: 10px;
     margin: 10px;
     border-radius: 35px;
-    background-color: var(--skills-grey);
-    color: var(--orange);
+    background-color: var(--skills-background);
+    color: var(--accent-area-color);
     text-align: center;
 }
 
@@ -463,11 +498,11 @@ p.skill {
 }
 
 .blue-second-text {
-    color: var(--night-blue);
+    color: var(--secondary-accent-color);
 }
 
 .lang-knowledge-degree-container {
-    background-color: var(--light-grey);
+    background-color: var(--additive-background);
     height: 1.5rem;
     border-radius: 0 35px 35px 0;
     justify-content: flex-start;
@@ -478,7 +513,7 @@ p.skill {
 
 .knowledge-degree__single {
     border-radius: 0 35px 35px 0;
-    background-color: var(--orange);
+    background-color: var(--accent-area-color);
     height: 100%;
     width: 0;
 }
@@ -504,8 +539,11 @@ p.skill {
 
 .knowledge-degree__double {
     border-radius: 0 35px 35px 0;
-    background-color: var(--orange);
-    background: linear-gradient(var(--orange) 0%, var(--night-blue) 100%);
+    background-color: var(--accent-area-color);
+    background: linear-gradient(
+        var(--accent-area-color) 0%,
+        var(--secondary-accent-color) 100%
+    );
     height: 100%;
     width: 0;
     animation: load-degree 2s normal forwards;
@@ -581,7 +619,7 @@ a.reference-content:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var(--orange);
+    background: var(--accent-area-color);
     transition: width 0.5s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -602,7 +640,7 @@ a.reference-content:active:after {
 }
 
 p.hobby-name {
-    color: var(--orange);
+    color: var(--accent-area-color);
 }
 
 .hobbies-flex-container {

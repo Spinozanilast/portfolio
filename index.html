@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" data-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,22 +9,28 @@
     <body>
         <div class="switchers-container">
             <div class="switch theme-switch">
-                <button id="light-button" class="switcher_button">
+                <!-- <button id="light-button" class="switcher_button">
                     <img
                         class="switch-button-content light"
                         src="./assets/LightVector.svg"
                         alt="Light On"
                     />
-                </button>
-                <button id="dark-button" class="switcher_button">
+                </button> -->
+                <button
+                    type="button"
+                    onclick="changeTheme(this, 'theme-image')"
+                    data-theme-toggle
+                    class="theme-toggle-button dark"
+                >
                     <img
+                        id="theme-image"
                         class="switch-button-content dark"
                         src="./assets/NightVector.svg"
                         alt="Dark On"
                     />
                 </button>
             </div>
-            <div class="switch">
+            <div class="lang-switch">
                 <button
                     id="ru-button"
                     class="switcher_button lang-switch-button active"
@@ -406,7 +412,7 @@
                         <div class="hobbies-flex-container">
                             <div class="hobby-element">
                                 <img
-                                    src="./assets/hobbies-assets/OrthogonalView.png"
+                                    src="./assets/hobbies-assets/light/OrthogonalView.png"
                                     alt="3D Modeling icon"
                                     class="hobby-icon"
                                 />
@@ -419,7 +425,7 @@
                             </div>
                             <div class="hobby-element">
                                 <img
-                                    src="./assets/hobbies-assets/Developer.png"
+                                    src="./assets/hobbies-assets/light/Developer.png"
                                     alt="Developer icon"
                                     class="hobby-icon"
                                 />
@@ -432,7 +438,7 @@
                             </div>
                             <div class="hobby-element">
                                 <img
-                                    src="./assets/hobbies-assets/Books.png"
+                                    src="./assets/hobbies-assets/light/Books.png"
                                     alt="Book icon"
                                     class="hobby-icon"
                                 />
@@ -445,7 +451,7 @@
                             </div>
                             <div class="hobby-element">
                                 <img
-                                    src="./assets/hobbies-assets/Plus.png"
+                                    src="./assets/hobbies-assets/light/Plus.png"
                                     alt="Plus icon"
                                     class="hobby-icon"
                                 />
