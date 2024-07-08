@@ -44,9 +44,7 @@ git clone https://github.com/spinozanilast/resume.git
 ![Telegram link](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&link=https://t.me/spinozanilast)
 ![VKontakte link](https://img.shields.io/badge/вконтакте-%232E87FB.svg?&style=for-the-badge&logo=vk&logoColor=white&link=https://vk.com/spinozanilast)
 
-
 </div>
 
 ## License
-
 [MIT](/LICENSE) by [@Spinozanilast](https://github.com/spinozanilast).
