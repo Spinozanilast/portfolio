@@ -14,6 +14,13 @@
 
 ## Preview
 
+![resume-gif-final](https://github.com/Spinozanilast/resume/assets/107877150/54b083db-20f6-44fc-b184-abd55db85cef)
+![resume-4k](https://github.com/Spinozanilast/resume/assets/107877150/8768424e-1f6f-4fe5-9621-7dc9df67ddf2)
+
+### Current View
+
+![image](https://github.com/Spinozanilast/resume/assets/107877150/f9ac7aee-9c20-4748-af76-30ad786fc476)
+
 ## Prerequisites
 
 Before you start doing what you want to do, you need:
