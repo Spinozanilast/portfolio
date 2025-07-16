@@ -25,19 +25,11 @@
 
 Before you start doing what you want to do, you need:
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+-   [Git](https://git-scm.com/downloads 'Download Git') must be installed on your operating system.
 
 ## Cloning
 
 To clone the project, follow these steps:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/spinozanilast/resume.git
-```
-
-Windows:
 
 ```bash
 git clone https://github.com/spinozanilast/resume.git
@@ -54,4 +46,5 @@ git clone https://github.com/spinozanilast/resume.git
 </div>
 
 ## License
+
 [MIT](/LICENSE) by [@Spinozanilast](https://github.com/spinozanilast).

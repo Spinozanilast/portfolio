@@ -24,11 +24,11 @@
     --dark-selection-color: #ffaf2e;
 
     /* langs progresses */
-    --width-cs: 80%;
-    --width-cpp: 50%;
-    --width-python: 50%;
+    --width-cs: 85%;
+    --width-cpp: 30%;
+    --width-python: 20%;
     --width-jsts: 75%;
-    --width-java: 70%;
+    --width-java: 40%;
     --width-sql: 80%;
 }
 
@@ -171,11 +171,25 @@ span {
   #SWITCHER
 \*-----------------------------------*/
 
-.switchers-container {
+.controls-container {
     margin-left: 20px;
     margin-top: 20px;
     display: flex;
     gap: 0.5rem;
+}
+
+#github-link {
+    position: absolute;
+    top: 1em;
+    right: 1.4em;
+    width: 45px;
+    height: 45px;
+    fill: white;
+}
+
+#github-link:hover,
+#github-link:active {
+    scale: 1.1;
 }
 
 /* Theme Switch */
@@ -437,7 +451,7 @@ div.articles-container {
 
 .article-content-text {
     font-family: 'Inter-Regular';
-    font-weight: 400;
+    padding-top: 10px;
     text-align: justify;
 }
 
@@ -665,6 +679,10 @@ p.hobby-name {
 
     .briefly-container {
         max-width: none;
+    }
+
+    div.articles-container {
+        height: auto;
     }
 }
 
